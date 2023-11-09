@@ -1,0 +1,13 @@
+{
+    "short_name": "ictfromabc",
+    "name": "ictfromabc",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "landscape",
+    "lang": "en",
+    "icons": [{
+      "src": "/assets/img/ravindu.jpg",
+      "sizes": "144x144",
+      "type": "image/png"
+    }]
+  }
