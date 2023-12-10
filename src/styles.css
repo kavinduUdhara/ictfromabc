@@ -41,30 +41,41 @@ body{
     @apply dark:bg-slate-600 dark:bg-opacity-20;
 }
 
+
+/**main body holder main body holder main body holder main body holder main body holder main body holder main body holder**/
 .main-body-holder{
     @apply bg-slate-200 w-full flex flex-col items-center justify-center pb-16;
     @apply dark:bg-slate-700
 }
 .main-body{
-    @apply flex pt-20 max-w-7xl w-full;
+    @apply pt-20 max-w-7xl w-full;
+    @apply sm:flex;
 }
 .main-body .left{
-    @apply w-1/2 p-5 flex items-center justify-center pb-20 relative;
+    @apply w-full flex p-2 items-center justify-center pb-0 relative;
+    @apply sm:w-1/2 sm:p-5 sm:pb-20;
 }
 .main-body .left .img-holder{
-    @apply w-96 relative;
+    @apply w-4/5 relative ;
+    @apply sm:w-96;
 }
 .main-body .left img{
     @apply w-full rounded-full;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 .main-body .left svg{
-    @apply text-blue-700 absolute dark:text-blue-600;
+    @apply text-blue-700 absolute dark:text-blue-600 hidden;
+    @apply sm:block;
     bottom: 10px;
-    right: 80px
+    right: 80px;
 }
 .main-body .right{
-    @apply w-1/2 p-5 flex pt-20
+    @apply w-full p-5 flex pt-3;
+    @apply sm:w-1/2 sm:p-5 sm:pt-20;
+}
+.main-body .right div{
+    @apply w-full flex flex-col items-center text-center
+    sm:block sm:text-left
 }
 .main-body h1{
     @apply text-2xl;
@@ -81,23 +92,47 @@ body{
 .main-body .right p{
     @apply max-w-md pt-5;
 }
+
+@media (max-width: 840px) {
+    .main-body h1{
+        @apply text-base
+    }
+    .main-body .title{
+        @apply text-5xl
+    }
+}
+
 .main-body .right button{
-    @apply inline-flex mt-10 bg-gray-300 p-2 pl-3 pr-3 rounded-lg;
+    @apply inline-flex mt-10 bg-gray-300 p-2 pl-3 pr-3 rounded-lg w-fit;
     @apply dark:bg-gray-800;
 }
+
+
+
+/**about me holder about me holder about me holder about me holder about me holder about me holder about me holder about me holder**/
 .about-me-holder{
-    @apply flex flex-col items-center justify-center pt-20 p-2;
-    @apply lg:p-20 md:p-10;
+    @apply flex flex-col items-center justify-center pt-24 p-2;
+    @apply lg:p-20 md:p-10 md:pt-20;
 }
 .about-me{
-    @apply -mt-40 bg-slate-50 max-w-4xl w-full rounded-2xl p-10 flex bg-opacity-60 backdrop-blur-xl;
+    @apply -mt-40 bg-slate-50 max-w-4xl w-full rounded-2xl p-5 lg:p-10 block bg-opacity-60 backdrop-blur-xl;
+    @apply sm:flex;
     @apply dark:bg-slate-500 dark:bg-opacity-60 dark:backdrop-blur-xl;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .about-me .left{
     width: 300px;
 }
+@media (max-width:640px) {
+    .about-me .left{
+        width: 100%;
+    }
+}
+.about-me .left ul{
+    @apply inline-flex sm:block justify-center w-full
+}
 .about-me .left li{
-    @apply p-1 pl-3 mb-1 rounded-md cursor-pointer transition duration-300
+    @apply ml-1 mb-6 p-1 pl-3 pr-3 sm:mb-1 rounded-md cursor-pointer transition duration-300
 }
 .about-me .left li:hover{
     @apply bg-slate-200 bg-opacity-40
