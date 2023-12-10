@@ -6,7 +6,7 @@ var CACHE_VERSION = '@VERSION@';
 self.oninstall = function(event) {
   var urls = [
     '/',
-    '/assets/img/',
+    '/assets/img/'
   ];
 
   urls = urls.map(function(url) {
